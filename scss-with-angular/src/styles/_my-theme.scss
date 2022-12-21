@@ -1,0 +1,28 @@
+@mixin maketheme($base-color, $accent-color) {
+    @for $i from 4 through 1 {
+        $color: lighten($base-color, $i * 10%);
+        --p-#{5 - $i}: #{$color};
+    }
+
+    --p-5: #{$base-color};
+
+
+    @for $i from 1 through 4 {
+        $color: darken($base-color, $i * 10%);
+        --p-#{5 + $i}: #{$color};
+    }
+
+    @for $i from 4 through 1 {
+        $color: lighten($accent-color, $i * 10%);
+        --a-#{5 - $i}: #{$color};
+    }
+
+    --a-5: #{$accent-color};
+
+
+    @for $i from 1 through 4 {
+        $color: darken($accent-color, $i * 10%);
+        --a-#{5 + $i}: #{$color};
+    }
+
+}

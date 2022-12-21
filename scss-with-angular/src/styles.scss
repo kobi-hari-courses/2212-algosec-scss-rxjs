@@ -1,0 +1,28 @@
+@import "my-theme";
+
+body {
+    .theme1 {
+        @include maketheme(blue, magenta  );
+    }
+
+    .theme2 {
+        @include maketheme(green, orange);
+    }
+
+    background-color: var(--p-1);
+}
+
+button {
+    background: var(--a-7);
+    color: white;
+    border: var(--a-9);
+    padding: 10px;
+    margin: 10px;
+    align-self: flex-start;
+    transition: 0.5s;
+
+    &:hover {
+        background-color: var(--a-3);
+        color: var(--a-9);
+    }
+}

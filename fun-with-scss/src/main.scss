@@ -1,0 +1,71 @@
+@use "sass:color";
+@use "body-def";
+@use "variables";
+
+$base-color: rgb(134, 39, 134);
+$bg-color: lighten($base-color, 30%);
+$accent-color: hsl(240, color.saturation($base-color), color.lightness($base-color));
+
+@function negative($number) {
+    @return 0 - $number;
+}
+
+$num: $x + 37;
+$negnum: negative($num);
+
+
+body {
+  h1 {
+    color: $base-color;
+    size: 50px;
+    top: $negnum * 1px;
+  }
+
+  nav {
+    background: $bg-color;
+
+    a {
+      font-size: 15px;
+      color: $accent-color;
+
+      &:hover {
+        font-size: 20px;
+        color: $base-color;
+      }
+    }
+  } // nav
+}
+
+@mixin header($size) {
+    font-size: $size;
+    color: red;
+    text-decoration: darkred underline;
+}
+
+@mixin box($base-color) {
+    color: $base-color;
+
+    @debug "the base color is: #{$base-color}";
+
+    background: lighten($base-color, 40%);
+    border: 1px solid darken($base-color, 40%);
+    padding: 4px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.blue-box {
+    @include box(blue);
+}
+
+.red-box {
+    @include box(red);
+}
+
+h1 {
+    @include header(45px);
+}
+
+h2 {
+    @include header(42px);
+}

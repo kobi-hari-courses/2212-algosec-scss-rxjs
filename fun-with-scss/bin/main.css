@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  display: grid;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body h1 {
+  color: rgb(134, 39, 134);
+  size: 50px;
+  top: -42px;
+}
+body nav {
+  background: #d670d6;
+}
+body nav a {
+  font-size: 15px;
+  color: hsl(240deg, 54.9132947977%, 33.9215686275%);
+}
+body nav a:hover {
+  font-size: 20px;
+  color: rgb(134, 39, 134);
+}
+
+.blue-box {
+  color: blue;
+  background: #ccccff;
+  border: 1px solid #000033;
+  padding: 4px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.red-box {
+  color: red;
+  background: #ffcccc;
+  border: 1px solid #330000;
+  padding: 4px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+h1 {
+  font-size: 45px;
+  color: red;
+  text-decoration: darkred underline;
+}
+
+h2 {
+  font-size: 42px;
+  color: red;
+  text-decoration: darkred underline;
+}
+
+/*# sourceMappingURL=main.css.map */

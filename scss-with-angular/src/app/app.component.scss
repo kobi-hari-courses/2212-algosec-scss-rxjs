@@ -1,0 +1,11 @@
+h1 {
+    color: var(--p-7);
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--p-2);
+    border: 1px solid var(--p-8);
+    color: var(--p-5);
+}
